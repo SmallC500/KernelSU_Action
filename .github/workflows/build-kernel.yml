@@ -107,7 +107,8 @@ jobs:
         cd ../
         git clone https://github.com/realme-kernel-opensource/realmeQ3_Q3pro_AndroidS_vendor-source -b master vendorsource
         cd vendorsource
-        mv vendor* ../
+        cp -r vendor ../
+        cp -r kernel ../
         cd $GITHUB_WORKSPACE/kernel_workspace
 
     - name: Download source boot image
